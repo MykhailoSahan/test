@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: "Raleway", "Helvetica", "Aial", sans-serif;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100vh;
+    background-image: url('https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.header::after {
+    background: #0c3632;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .85;
+    position: absolute;
+    top: 0;
+    transition: all .25s ease;
+    width: 100%;
+}
+
+nav {
+    z-index: 1;
+    width: calc(100% - 40px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.img-logo {
+    height: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    position: relative;
+}
+
+.list::after {
+    background: #17baaa;
+    bottom: -8px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all .25s ease;
+    width: 100%;
+}
+
+.list:hover::after {
+    transform: scale(1);
+}
+
+.list:hover {
+    color: #17baaa;
+}
+
+.nav-list li {
+    padding: 0 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-list li:last-child {
+    padding-right: 0;
+}
+
+
+.nav-list li:last-of-type a {
+    display: flex;
+    align-items: center;
+    background-color: rgb(201, 35, 58);
+    padding: 0 10px;
+    line-height: 30px; 
+    border-radius: 3%;
+}
+
+.heart-icon {
+    margin-right: 5px;
+}
+
+.nav-list li:last-of-type a svg {
+    width: 1em;
+}
+
+.nav-list li:last-of-type a:hover {
+    background-color: brown;
+    transition: all .5s ease;
+}
+
+.header-second {
+    position: relative;
+    z-index: 1;
+    margin: auto 0;
+}
+
+.h-1 {
+    display: relative;
+    z-index: 1;
+    font-size: 56px;
+    line-height: 85px;
+    color: white;
+}
+
+.second-episod {
+    color:#17baaa;
+}
+
+.find-more {
+    background: #17baaa;
+    color: #fff;
+    align-items: center;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40px;
+    outline: none;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+}
+
+.find-more:hover {
+    background-color:#129185;
+}
+
+.nav-toggle {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.burger-icon {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+@media screen and (max-width: 960px) {
+    .nav-list li {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* @media screen and (min-width: 960px) {
+    .nav-toggle {
+        display: none;
+    }
+} */
